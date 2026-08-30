@@ -120,3 +120,4 @@ if (no1 > no2) {
 } else {
     console.log("Both numbers are equal");
 }
+// Ques: 9 -
