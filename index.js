@@ -1,4 +1,5 @@
 // console.log("Hi, Arpit")
+//Section 1 - Variables & Operators
 
 console.log("Ques:1 - Calculations");
 
@@ -237,4 +238,235 @@ if (unit <= 100) {
     totalBill3 = (firstSlab * 5) + (100 * 7) + (thirdSlab * 10)
     console.log("Total Bill:", totalBill3.toFixed(2));
 }
+
+//Ques: 16 - Simple Login
+console.log("\nQues:16 - Simple Login");
+
+let username = "admin";
+let password = "12345";
+
+if (username == "admin" && password == "12345") {
+    console.log("Login Successful");
+} else {
+    console.log("Invalid username or password");
+}
+
+//Ques: 17 - Salary Bonus
+console.log("\nQues: 17 - Salary Bonus");
+
+let oSal = 50000;
+let exp = 10;
+let bo1 = oSal + oSal * 0.20;
+let bo2 = oSal + oSal * 0.10;
+let bo3 = oSal + oSal * 0.05;
+// let bo4 = oSal+oSal/10;
+
+if (exp >= 10) {
+    console.log(`Original Salary: ${oSal}\nBonus:20%\nFinal Salary:${bo1}`);
+}
+else if (exp >= 5) {
+    console.log(`Original Salary: ${oSal}\nBonus:10%\nFinal Salary:${bo2}`);
+}
+else if (exp >= 2) {
+    console.log(`Original Salary: ${oSal}\nBonus:5%\nFinal Salary:${bo3}`);
+}
+else {
+    console.log(`Original Salary: ${oSal}\nBonus:0%\nFinal Salary:${oSal}`);
+}
+
+//Ques:18 -  Age Category
+console.log("\nQues:18 -  Age Category");
+
+age = 60;
+
+if (age >= 0 && age <= 12) {
+    console.log("Child");
+}
+if (age >= 13 && age <= 19) {
+    console.log("Teenager");
+}
+if (age >= 20 && age <= 59) {
+    console.log("Adult");
+}
+else {
+    console.log("Senior Citizen");
+}
+//Section 4 - switch-case
+//Ques: 19 - Day of the Week
+console.log("Ques: 19 - Day of the Week");
+
+let day = 7;
+
+switch (day) {
+
+    case 1:
+        console.log("Monday");
+        break;
+
+    case 2:
+        console.log("Tuesday");
+        break;
+
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thrusday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+
+    default:
+        console.log("Invalid day");
+}
+
+//Ques: 20 - Simple Calculator
+console.log("\nQues: 20 - Simple Calculator");
+
+let Operators = "+"
+switch (Operators) {
+    case "+":
+        console.log(`${num1}+${num2}: `, num1 + num2);
+        break;
+    case "-":
+        console.log(`${num1}-${num2}: `, num1 - num2);
+        break;
+    case "*":
+        console.log(`${num1}*${num2}: `, num1 * num2);
+        break;
+    case "/":
+        console.log(`${num1}/${num2}: `, num1 / num2);
+        break;
+    case "%":
+        console.log(`${num1}%${num2}: `, num1 % num2);
+        break;
+    default:
+        console.log("Enter Interzers Only.");
+
+}
+
+//Ques: 21 - Month Name
+console.log("\nQues: 21 - Month Name");
+
+let month = 5;
+
+switch (month) {
+
+    case 1:
+        console.log("January");
+        break;
+
+    case 2:
+        console.log("February");
+        break;
+
+    case 3:
+        console.log("March");
+        break;
+
+    case 4:
+        console.log("April");
+        break;
+
+    case 5:
+        console.log("May");
+        break;
+
+    case 6:
+        console.log("June");
+        break;
+
+    case 7:
+        console.log("July");
+        break;
+
+    case 8:
+        console.log("August");
+        break;
+
+    case 9:
+        console.log("September");
+        break;
+
+    case 10:
+        console.log("October");
+        break;
+
+    case 11:
+        console.log("November");
+        break;
+
+    case 12:
+        console.log("December");
+        break;
+
+    default:
+        console.log("Invalid Month");
+}
+
+//Ques: 22 -  Menu-Based Calculator
+
+console.log("\nQues: 22 - Menu-Based Calculator");
+
+console.log("\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Modulus\nEnter your choice: ");
+
+let choice = 5
+num1 = 20;
+num2 = 30;
+
+switch (choice) {
+
+    case 1:
+        console.log("Addition:", num1 + num2);
+        break;
+
+    case 2:
+        console.log("Subtraction:", num1 - num2);
+        break;
+
+    case 3:
+        console.log("Multiplication:", num1 * num2);
+        break;
+
+    case 4:
+        console.log("Division:", num1 / num2);
+        break;
+
+    case 5:
+        console.log("Modulus:", num1 % num2);
+        break;
+
+    default:
+        console.log("Invalid Choice");
+}
+
+//Ques: 23 - Traffic Signal
+console.log("Ques: 23 - Traffic Signal");
+
+let light = "green";
+
+switch (light) {
+    case "red":
+        console.log("Stop");
+        break;
+    case "yellow":
+        console.log("Wait");
+        break;
+    case "green":
+        console.log("Go");
+        break;
+
+    default:
+        console.log("Invalid signal");
+
+}
+
+//Section 5 - Mixed Problems
 
