@@ -187,4 +187,54 @@ if (Percentage < 0 || Percentage > 100) {
     console.log("Grade: F");
 }
 
+//Ques:14 - Student Result
+console.log("\nQues:14 - Student Result");
+
+s1 = 71;
+s2 = 40;
+s3 = 59;
+
+let tMarks = s1 + s2 + s3;
+let avg = tMarks / 3;
+
+if (s1 > 39 && s2 > 39 && s3 > 39) {
+    console.log("Pass");
+    console.log("Average Marks:", avg.toFixed(2));
+    if (avg >= 75) {
+        console.log("→ Distinction");
+    } else if (avg >= 60) {
+        console.log("→ First Division");
+    } else if (avg >= 50) {
+        console.log("→ Second Division");
+    } else {
+        console.log("→ Pass");
+    }
+} else {
+    console.log("Fail");
+}
+
+//Ques: 15 - Electricity Bill
+console.log("\nQues: 15 - Electricity Bill");
+
+let unit = 250;
+let firstSlab = 100;
+let secondSlab = 1;
+totalBill = 0;
+let totalBill2 = 0;
+let totalBill3 = 0;
+let thirdSlab = unit - 200;
+
+
+
+if (unit <= 100) {
+    totalBill = unit * 5;
+    console.log('Total Bill:', totalBill.toFixed(2));
+} else if (unit > 100 && unit <= 200) {
+    secondSlab = (unit - firstSlab);
+    totalBill2 = (firstSlab * 5) + (secondSlab * 7);
+    console.log("Total Bill:", totalBill2.toFixed(2));
+} else {
+    totalBill3 = (firstSlab * 5) + (100 * 7) + (thirdSlab * 10)
+    console.log("Total Bill:", totalBill3.toFixed(2));
+}
 
