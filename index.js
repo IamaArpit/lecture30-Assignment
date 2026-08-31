@@ -120,4 +120,71 @@ if (no1 > no2) {
 } else {
     console.log("Both numbers are equal");
 }
-// Ques: 9 -
+// Ques: 9 -  Largest of Three Numbers
+console.log("\nQues:9 - Largest of Three Numbers");
+
+let a1 = 10;
+let a2 = 9;
+let a3 = 11;
+
+if (a1 > a2 && a1 > a3) {
+    console.log(`${a1} is greater than ${a2} and ${a3}`);
+} if (a2 > a3) {
+    console.log(`${a2} is greater than ${a1} and ${a3}`);
+} else {
+    console.log(`${a3} is greater than ${a1} and ${a2}`);
+}
+//Ques:10 - Voting Eligibility
+console.log("\nQues:10 - Voting Eligibility");
+
+let age = 18;
+
+if (age >= 18) {
+    console.log(`Eligible`);
+} else {
+    console.log(`Not Eligible`);
+}
+//Ques:11 - Driving Eligibility
+console.log("\nQues:11 - Driving Eligibility");
+
+hasLicense = true;
+
+if (age >= 18 && hasLicense) {
+    console.log(`You can drive`);
+} else {
+    console.log(`You can't drive`);
+}
+
+//Ques:12 - Number Range
+console.log("\nQues:12 - Number Range");
+
+if (num1 >= 10 && num1 <= 100) {
+    console.log(`${num1} is between 10 and 100`);
+} else {
+    console.log(`${num1} is not between 10 and 100`);
+}
+
+//Section 3 - if, else-if & Nested Conditions
+
+//Ques:13 - Student Grade
+console.log("\nQues:13 - Student Grade");
+
+let Percentage = 98;
+
+if (Percentage < 0 || Percentage > 100) {
+    console.log("Please Enter Valod Percentage");
+} else if (Percentage >= 90) {
+    console.log("Grade: A");
+} else if (Percentage >= 80 && Percentage <= 89) {
+    console.log("Grade: B");
+} else if (Percentage >= 70 && Percentage <= 79) {
+    console.log("Grade: c");
+} else if (Percentage >= 60 && Percentage <= 69) {
+    console.log("Grade: D");
+} else if (Percentage >= 40 && Percentage <= 59) {
+    console.log("Grade: E");
+} else if (Percentage < 40) {
+    console.log("Grade: F");
+}
+
+
