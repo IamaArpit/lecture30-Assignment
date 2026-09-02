@@ -130,7 +130,7 @@ let a3 = 11;
 
 if (a1 > a2 && a1 > a3) {
     console.log(`${a1} is greater than ${a2} and ${a3}`);
-} if (a2 > a3) {
+} else if (a2 > a3) {
     console.log(`${a2} is greater than ${a1} and ${a3}`);
 } else {
     console.log(`${a3} is greater than ${a1} and ${a2}`);
@@ -148,7 +148,7 @@ if (age >= 18) {
 //Ques:11 - Driving Eligibility
 console.log("\nQues:11 - Driving Eligibility");
 
-hasLicense = true;
+let hasLicense = true;
 
 if (age >= 18 && hasLicense) {
     console.log(`You can drive`);
@@ -173,13 +173,13 @@ console.log("\nQues:13 - Student Grade");
 let Percentage = 98;
 
 if (Percentage < 0 || Percentage > 100) {
-    console.log("Please Enter Valod Percentage");
+    console.log("Please Enter Valid Percentage");
 } else if (Percentage >= 90) {
     console.log("Grade: A");
 } else if (Percentage >= 80 && Percentage <= 89) {
     console.log("Grade: B");
 } else if (Percentage >= 70 && Percentage <= 79) {
-    console.log("Grade: c");
+    console.log("Grade: C");
 } else if (Percentage >= 60 && Percentage <= 69) {
     console.log("Grade: D");
 } else if (Percentage >= 40 && Percentage <= 59) {
@@ -245,7 +245,7 @@ console.log("\nQues:16 - Simple Login");
 let username = "admin";
 let password = "12345";
 
-if (username == "admin" && password == "12345") {
+if (username === "admin" && password === "12345") {
     console.log("Login Successful");
 } else {
     console.log("Invalid username or password");
@@ -279,18 +279,18 @@ console.log("\nQues:18 -  Age Category");
 
 age = 60;
 
-if (age >= 0 && age <= 12) {
+if (age < 0) {
+    console.log("Invalid age");
+} else if (age <= 12) {
     console.log("Child");
-}
-if (age >= 13 && age <= 19) {
+} else if (age <= 19) {
     console.log("Teenager");
-}
-if (age >= 20 && age <= 59) {
+} else if (age <= 59) {
     console.log("Adult");
-}
-else {
+} else {
     console.log("Senior Citizen");
 }
+
 //Section 4 - switch-case
 //Ques: 19 - Day of the Week
 console.log("Ques: 19 - Day of the Week");
@@ -311,7 +311,7 @@ switch (day) {
         console.log("Wednesday");
         break;
     case 4:
-        console.log("Thrusday");
+        console.log("Thursday");
         break;
     case 5:
         console.log("Friday");
@@ -342,13 +342,17 @@ switch (Operators) {
         console.log(`${num1}*${num2}: `, num1 * num2);
         break;
     case "/":
-        console.log(`${num1}/${num2}: `, num1 / num2);
+        if (num2 === 0) {
+            console.log("Cannot divide by zero");
+        } else {
+            console.log(`${num1}/${num2}: `, num1 / num2);
+        }
         break;
     case "%":
         console.log(`${num1}%${num2}: `, num1 % num2);
         break;
     default:
-        console.log("Enter Interzers Only.");
+        console.log("Invalid operator.");
 
 }
 
@@ -468,5 +472,210 @@ switch (light) {
 
 }
 
+
 //Section 5 - Mixed Problems
+// Ques: 24 -  ATM Transaction
+console.log("Ques: 24 -  ATM Transaction");
+
+let balance = 10000
+let withdrawAmount = 3000
+
+if (withdrawAmount > 0) {
+    if (withdrawAmount <= balance) {
+        balance = balance - withdrawAmount
+        console.log("Withdrawal successful");
+        console.log(`Remaining balance: ${balance}`);
+    } else {
+        console.log("Insufficient balance");
+    }
+} else {
+    console.log("Invalid withdrawal amount");
+}
+
+// Ques: 25 - Movie Ticket System
+console.log("\nQues: 25 - Movie Ticket System");
+
+age = 25;
+let numberOfTickets = 3;
+let ticketPrice;
+
+if (age < 12) {
+    ticketPrice = 100;
+} else if (age < 60) {
+    ticketPrice = 200;
+} else {
+    ticketPrice = 120;
+}
+
+let totalAmount = ticketPrice * numberOfTickets;
+
+console.log(`Age: ${age}`);
+console.log(`Ticket Price: ₹${ticketPrice}`);
+console.log(`Number of Tickets: ${numberOfTickets}`);
+console.log(`Total Amount: ₹${totalAmount}`);
+//Ques: 26 - Restaurant Menu
+console.log("Ques: 26 - Restaurant Menu");
+
+console.log("\nMenu: \n1. Burger → ₹150 \n2. Pizza → ₹250 \n3. Pasta → ₹180 \n4. Sandwich → ₹120");
+
+choice = Number(prompt("Enter number:"));
+qnt = 0;
+qnt = Number(prompt("Enter Quantity:"));
+
+switch (choice) {
+    case 1:
+        console.log("Selected: 1. Burger → ₹150");
+        let burger = 150;
+        console.log("Total: ₹", burger * qnt);
+        break;
+    case 2:
+        console.log("Selected: 2. Pizza → ₹250");
+        let pizza = 250;
+        console.log("Total: ₹", pizza * qnt);
+        break;
+    case 3:
+        console.log("Selected: 3. Pasta → ₹180");
+        let pasta = 180;
+        console.log("Total: ₹", pasta * qnt);
+        break;
+    case 4:
+        console.log("Selected: 4. Sandwich → ₹120");
+        let sandwich = 120;
+        console.log("Total: ₹", sandwich * qnt);
+        break;
+    default:
+        console.log("Kindly Choose within the menu.");
+}
+
+//"Oues:27 - Electricity Bill + Discount
+console.log("Oues:27 - Electricity Bill + Discount");
+
+let bill = 0;
+
+if (unit <= 100) {
+    bill = unit * 5;
+} else if (unit <= 200) {
+    bill = (100 * 5) + ((unit - 100) * 7);
+} else {
+    bill = (100 * 5) + (100 * 7) + ((unit - 200) * 10);
+}
+
+let discountAmount = 0;
+
+if (bill >= 2000) {
+    discountAmount = bill * 0.10;
+}
+
+finalBill = bill - discountAmount;
+
+console.log(`\nUnits: ${unit}`);
+console.log(`Original Bill: ₹${bill}`);
+console.log(`Discount: ₹${discountAmount}`);
+console.log(`Final Bill: ₹${finalBill}`);
+
+
+//Ques: 28 - Simple ATM Menu
+console.log("\nQues: 28 - Simple ATM Menu");
+
+console.log("\n1. Check Balance \n2. Deposit Money \n3. Withdraw Money \n4. Exit");
+choice = Number(prompt("Enter Your Choice:"));
+switch (choice) {
+    case 1:
+        console.log(`Current Balance: ${balance}`);
+        break;
+    case 2:
+        let deposit = Number(prompt("Enter Deposit Amount:"));
+        balance = balance + deposit;
+        console.log(`\n₹${deposit} Deposit Successful!`);
+
+        break;
+    case 3:
+        let withdrawAmount = Number(prompt("Enter Withdrawal Amount:"));
+        if (withdrawAmount > 0) {
+            if (withdrawAmount <= balance) {
+                balance = balance - withdrawAmount;
+                console.log("Withdrawal successful");
+                console.log(`Remaining balance: ${balance}`);
+            } else {
+                console.log("Insufficient balance");
+            }
+        } else {
+            console.log("Invalid withdrawal amount");
+        }
+        break;
+    case 4:
+        console.log("Thanks For Using Our Service.");
+        break;
+
+    default:
+        console.log("Error: Invalid Choice.");
+        break;
+}
+
+//Ques: 29 - Number Classification
+console.log("\nQues: 29 - Number Classification");
+
+num = 150;
+
+if (num < 0) {
+    console.log("Negative");
+} else if (num > 0) {
+    console.log("Positive");
+} else {
+    console.log("Zero");
+}
+
+if (num % 2 === 0) {
+    console.log("Even Number");
+} else {
+    console.log("Odd Number");
+}
+
+if (num > 100) {
+    console.log(`Greater than 100`);
+} else if (num < 100) {
+    console.log(`Less than 100`);
+} else {
+    console.log(`Equal to 100`);
+}
+
+//Ques: 30 - Student Result System
+console.log("Ques: 30 - Student Result System");
+
+let studentName = prompt("Enter Student Name:");
+let rollNumber = Number(prompt("Enter Roll Number:"));
+let mathMarks = 85;
+let scienceMarks = 78;
+let englishMarks = 92;
+
+totalMarks = mathMarks + scienceMarks + englishMarks;
+percentage = (totalMarks / 300) * 100;
+
+if (percentage < 0 || percentage > 100) {
+    console.log("Please Enter Valod Percentage");
+} else if (percentage >= 90) {
+    console.log("Grade: A");
+} else if (percentage >= 80 && percentage <= 89) {
+    console.log("Grade: B");
+} else if (percentage >= 70 && percentage <= 79) {
+    console.log("Grade: c");
+} else if (percentage >= 60 && percentage <= 69) {
+    console.log("Grade: D");
+} else if (percentage >= 40 && percentage <= 59) {
+    console.log("Grade: E");
+} else if (percentage < 40) {
+    console.log("Grade: F");
+}
+
+
+console.log(`\nName: ${studentName}`);
+console.log(`\nRoll: ${rollNumber}`);
+console.log(`\nMath: ${mathMarks} \nScience: ${scienceMarks} \nEnglish:${englishMarks}\n`);
+console.log(`\nTotal: ${totalMarks} \nPercentage: ${percentage.toFixed(2)}%`);
+if (mathMarks > 39 && scienceMarks > 39 && englishMarks > 39) {
+    console.log("\nResult: Pass");
+} else {
+    console.log("\nResult: Fail");
+}
+
 
